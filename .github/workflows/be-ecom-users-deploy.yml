@@ -1,0 +1,12 @@
+name: Deploy
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    uses: Akki-8989/infra-repo/.github/workflows/deploy-be-ecom-users.yml@main
+    with:
+      repo_name: be-ecom-users
+      infra_repo: infra-repo
+    secrets: inherit
